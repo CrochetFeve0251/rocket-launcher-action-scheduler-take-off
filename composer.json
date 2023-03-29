@@ -1,0 +1,41 @@
+{
+  "name": "crochetfeve0251/rocket-launcher-action-scheduler-take-off",
+  "description": "Initialisation library for psr4 plugin",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "type": "library",
+  "authors": [
+    {
+      "name": "coquardcyr",
+      "email": "coquardcyr@gmail.com"
+    }
+  ],
+  "require": {
+    "crochetfeve0251/rocket-launcher-builder": "1.0.*",
+    "woocommerce/action-scheduler": "^3.4",
+    "ext-mbstring": "*",
+    "ext-json": "*",
+    "composer/composer": "^2.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5 || ^8 || ^9",
+    "wp-media/phpunit": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RocketLauncherActionSchedulerTakeOff\\": "inc/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RocketLauncherActionSchedulerTakeOff\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "rocket-launcher": {
+      "provider" : "RocketLauncherActionSchedulerTakeOff\\ServiceProvider",
+      "command": "action-scheduler:initialize",
+      "install": true
+    }
+  }
+}
