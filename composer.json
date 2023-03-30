@@ -36,7 +36,10 @@
       "provider" : "RocketLauncherActionSchedulerTakeOff\\ServiceProvider",
       "command": "action-scheduler:initialize",
       "install": true,
-      "clean": false
+      "clean": false,
+      "libraries" : {
+        "crochetfeve0251/rocket-launcher-action-scheduler": "^0.0.1"
+      }
     }
   }
 }
