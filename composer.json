@@ -35,7 +35,8 @@
     "rocket-launcher": {
       "provider" : "RocketLauncherActionSchedulerTakeOff\\ServiceProvider",
       "command": "action-scheduler:initialize",
-      "install": true
+      "install": true,
+      "clean": false
     }
   }
 }

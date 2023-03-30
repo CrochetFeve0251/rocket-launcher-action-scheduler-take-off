@@ -5,6 +5,7 @@ namespace RocketLauncherActionSchedulerTakeOff;
 use League\Flysystem\Filesystem;
 use RocketLauncherActionSchedulerTakeOff\Commands\InstallCommand;
 use RocketLauncherActionSchedulerTakeOff\Services\BootManager;
+use RocketLauncherActionSchedulerTakeOff\Services\PluginManager;
 use RocketLauncherBuilder\App;
 use RocketLauncherBuilder\Entities\Configurations;
 use RocketLauncherBuilder\ServiceProviders\ServiceProviderInterface;
@@ -42,7 +43,8 @@ class ServiceProvider implements ServiceProviderInterface
     public function attach_commands(App $app): App
     {
         $boot_manager = new BootManager($this->filesystem, $this->configs);
-        $app->add(new InstallCommand($boot_manager));
+        $plugin_manager = new PluginManager($this->filesystem);
+        $app->add(new InstallCommand($boot_manager, $plugin_manager));
 
         return $app;
     }

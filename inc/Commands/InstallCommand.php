@@ -3,6 +3,7 @@
 namespace RocketLauncherActionSchedulerTakeOff\Commands;
 
 use RocketLauncherActionSchedulerTakeOff\Services\BootManager;
+use RocketLauncherActionSchedulerTakeOff\Services\PluginManager;
 use RocketLauncherBuilder\Commands\Command;
 
 class InstallCommand extends Command
@@ -13,11 +14,17 @@ class InstallCommand extends Command
      */
     protected $boot_manager;
 
-    public function __construct(BootManager $boot_manager)
+    /**
+     * @var PluginManager
+     */
+    protected $plugin_manager;
+
+    public function __construct(BootManager $boot_manager, PluginManager $plugin_manager)
     {
         parent::__construct('action-scheduler:initialize', 'Initialize the Action Scheduler library');
 
         $this->boot_manager = $boot_manager;
+        $this->plugin_manager = $plugin_manager;
 
         $this
             // Usage examples:
@@ -28,6 +35,7 @@ class InstallCommand extends Command
     }
 
     public function execute() {
+        $this->plugin_manager->install();
         $this->boot_manager->install();
     }
 }
