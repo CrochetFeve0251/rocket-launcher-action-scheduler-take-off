@@ -33,7 +33,7 @@ class BootManager
         }
         $content = $this->filesystem->read($boot_file);
 
-        if( ! preg_match('/(?<boot>boot\s*\(\s*__FILE__\s*\)\s;\b*\n)/', $content, $results) ) {
+        if( ! preg_match('/(?<boot>boot\s*\(\s*__FILE__\s*\)\s*;\b*\n)/', $content, $results) ) {
             return;
         }
 
