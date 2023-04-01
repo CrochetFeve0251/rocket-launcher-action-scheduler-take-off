@@ -44,10 +44,11 @@ class PluginManager
         }
 
         if( ! array_key_exists( $as_path, $json['extra']['installer-paths'] ) ) {
-            if( ! is_array( $json['extra']['installer-paths'][$as_path] ) ) {
-                $json['extra']['installer-paths'][$as_path] = [];
-            }
-            array_unshift($json['extra']['installer-paths'][$as_path], $as_library);
+            $json['extra']['installer-paths'][$as_path] = array_merge([
+                $as_path => [
+                    $as_library
+                ]
+            ], $json['extra']['installer-paths'][$as_path]);
         }
 
         if( array_key_exists('require-dev', $json) && array_key_exists($as_library, $json['require-dev'] ) ) {
