@@ -1,6 +1,6 @@
 <?php
 
-namespace RocketLauncherActionSchedulerTakeOff\Services;
+namespace LaunchpadActionSchedulerTakeOff\Services;
 
 use League\Flysystem\Filesystem;
 

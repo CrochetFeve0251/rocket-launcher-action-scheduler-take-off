@@ -1,6 +1,6 @@
 {
-  "name": "crochetfeve0251/rocket-launcher-action-scheduler-take-off",
-  "description": "Initialisation library for psr4 plugin",
+  "name": "wp-launchpad/action-scheduler-take-off",
+  "description": "Initialisation library for Action Scheduler from Launchpad framework",
   "minimum-stability": "stable",
   "license": "proprietary",
   "type": "library",
@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "crochetfeve0251/rocket-launcher-builder": "1.0.*",
+    "wp-launchpad/cli": "1.0.*",
     "woocommerce/action-scheduler": "^3.4",
     "ext-json": "*"
   },
@@ -21,22 +21,22 @@
   },
   "autoload": {
     "psr-4": {
-      "RocketLauncherActionSchedulerTakeOff\\": "inc/"
+      "LaunchpadActionSchedulerTakeOff\\": "inc/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "RocketLauncherActionSchedulerTakeOff\\Tests\\": "tests/"
+      "LaunchpadActionSchedulerTakeOff\\Tests\\": "tests/"
     }
   },
   "extra": {
-    "rocket-launcher": {
-      "provider" : "RocketLauncherActionSchedulerTakeOff\\ServiceProvider",
+    "launchpad": {
+      "provider" : "LaunchpadActionSchedulerTakeOff\\ServiceProvider",
       "command": "action-scheduler:initialize",
       "install": true,
       "clean": true,
       "libraries" : {
-        "crochetfeve0251/rocket-launcher-action-scheduler": "^0.0.1"
+        "wp-launchpad/action-scheduler": "^0.0.2"
       }
     }
   }

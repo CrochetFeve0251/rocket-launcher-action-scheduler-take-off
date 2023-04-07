@@ -1,14 +1,14 @@
 <?php
 
-namespace RocketLauncherActionSchedulerTakeOff;
+namespace LaunchpadActionSchedulerTakeOff;
 
 use League\Flysystem\Filesystem;
-use RocketLauncherActionSchedulerTakeOff\Commands\InstallCommand;
-use RocketLauncherActionSchedulerTakeOff\Services\BootManager;
-use RocketLauncherActionSchedulerTakeOff\Services\PluginManager;
-use RocketLauncherBuilder\App;
-use RocketLauncherBuilder\Entities\Configurations;
-use RocketLauncherBuilder\ServiceProviders\ServiceProviderInterface;
+use LaunchpadActionSchedulerTakeOff\Commands\InstallCommand;
+use LaunchpadActionSchedulerTakeOff\Services\BootManager;
+use LaunchpadActionSchedulerTakeOff\Services\PluginManager;
+use LaunchpadCLI\App;
+use LaunchpadCLI\Entities\Configurations;
+use LaunchpadCLI\ServiceProviders\ServiceProviderInterface;
 
 class ServiceProvider implements ServiceProviderInterface
 {

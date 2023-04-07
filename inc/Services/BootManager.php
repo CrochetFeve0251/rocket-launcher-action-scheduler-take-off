@@ -1,9 +1,9 @@
 <?php
 
-namespace RocketLauncherActionSchedulerTakeOff\Services;
+namespace LaunchpadActionSchedulerTakeOff\Services;
 
 use League\Flysystem\Filesystem;
-use RocketLauncherBuilder\Entities\Configurations;
+use LaunchpadCLI\Entities\Configurations;
 
 class BootManager
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace RocketLauncherActionSchedulerTakeOff\Commands;
+namespace LaunchpadActionSchedulerTakeOff\Commands;
 
-use RocketLauncherActionSchedulerTakeOff\Services\BootManager;
-use RocketLauncherActionSchedulerTakeOff\Services\PluginManager;
-use RocketLauncherBuilder\Commands\Command;
+use LaunchpadActionSchedulerTakeOff\Services\BootManager;
+use LaunchpadActionSchedulerTakeOff\Services\PluginManager;
+use LaunchpadCLI\Commands\Command;
 
 class InstallCommand extends Command
 {
