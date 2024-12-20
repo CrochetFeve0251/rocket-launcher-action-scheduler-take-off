@@ -35,7 +35,7 @@
             "install": true,
             "clean": true,
             "libraries": {
-                "wp-launchpad/action-scheduler": "^0.0.2"
+                "wp-launchpad/action-scheduler": "^3.1"
             }
         }
     }
